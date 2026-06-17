@@ -1,4 +1,5 @@
-import { useState } from "react";
+import Landing from "./components/Landing";
+import { useState, useEffect, useRef } from "react";
 import { GoogleGenAI } from "@google/genai";
 import "./App.css";
 
@@ -7,6 +8,7 @@ const ai = new GoogleGenAI({
 });
 
 function App() {
+  const [showChat, setShowChat] = useState(false);
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -16,6 +18,14 @@ function App() {
       sender: "bot",
     },
   ]);
+
+  const chatEndRef = useRef(null);
+
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }, [messages]);
 
   const sendMessage = async () => {
     if (!message.trim()) return;
@@ -36,10 +46,16 @@ function App() {
         model: "gemini-2.5-flash",
         contents: `
 You are Coco, a friendly AI assistant.
-Keep your answers helpful, friendly and concise.
+Your creator is Anisha.
+Keep responses short, helpful and friendly.
+
+Conversation:
+${messages
+  .map((msg) => `${msg.sender}: ${msg.text}`)
+  .join("\n")}
 
 User: ${currentMessage}
-        `,
+`,
       });
 
       setMessages((prev) => [
@@ -64,9 +80,41 @@ User: ${currentMessage}
     setLoading(false);
   };
 
+  const clearChat = () => {
+    setMessages([
+      {
+        text: "Hi Anisha! I'm Coco 🤖. How can I help you today?",
+        sender: "bot",
+      },
+    ]);
+  };
+
+  // LANDING PAGE
+  if (!showChat) {
+    return (
+      <Landing
+        onStart={() => setShowChat(true)}
+      />
+    );
+  }
+
+  // CHAT PAGE
+
+  
   return (
+
     <div className="chat-container">
-      <h1>AI Chatbot</h1>
+      <h1 className="chat-title">
+    Coco AI 🤖
+  </h1>
+
+  <button
+  className="back-btn"
+  onClick={() => setShowChat(false)}
+>
+  ⬅ Back
+</button>
+
 
       <div className="chat-box">
         {messages.map((msg, index) => (
@@ -83,20 +131,33 @@ User: ${currentMessage}
             🤔 Thinking...
           </div>
         )}
+
+        <div ref={chatEndRef}></div>
       </div>
 
       <div className="input-area">
         <input
           type="text"
-          placeholder="Type your message..."
+          placeholder="Ask Coco anything..."
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e) =>
+            setMessage(e.target.value)
+          }
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               sendMessage();
             }
           }}
         />
+
+        <div className="bottom-actions">
+  <button
+    className="clear-btn"
+    onClick={clearChat}
+  >
+    🗑 Clear Chat
+  </button>
+</div>
 
         <button onClick={sendMessage}>
           Send
