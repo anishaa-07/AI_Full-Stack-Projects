@@ -12,7 +12,7 @@ function App() {
 
   const [messages, setMessages] = useState([
     {
-      text: "Hi Anisha! How can I help you today?",
+      text: "Hi Anisha! I'm Coco 🤖. How can I help you today?",
       sender: "bot",
     },
   ]);
@@ -34,7 +34,12 @@ function App() {
     try {
       const response = await ai.models.generateContent({
         model: "gemini-2.5-flash",
-        contents: currentMessage,
+        contents: `
+You are Coco, a friendly AI assistant.
+Keep your answers helpful, friendly and concise.
+
+User: ${currentMessage}
+        `,
       });
 
       setMessages((prev) => [
@@ -45,10 +50,12 @@ function App() {
         },
       ]);
     } catch (error) {
+      console.error(error);
+
       setMessages((prev) => [
         ...prev,
         {
-          text: "Something went wrong.",
+          text: "⚠️ Sorry, something went wrong. Please try again.",
           sender: "bot",
         },
       ]);
@@ -73,7 +80,7 @@ function App() {
 
         {loading && (
           <div className="message bot">
-            Thinking...
+            🤔 Thinking...
           </div>
         )}
       </div>
@@ -84,6 +91,11 @@ function App() {
           placeholder="Type your message..."
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              sendMessage();
+            }
+          }}
         />
 
         <button onClick={sendMessage}>
