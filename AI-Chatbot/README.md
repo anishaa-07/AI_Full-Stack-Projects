@@ -1,16 +1,128 @@
-# React + Vite
+# 🤖 Coco AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Meet Coco — Your Personal AI Bestie
 
-Currently, two official plugins are available:
+A modern AI-powered chatbot built with React, Vite, and Google's Gemini AI. Coco delivers intelligent conversations through a clean and responsive user interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 🤖 Powered by Gemini AI
+* 💬 Real-time AI Conversations
+* 🎨 Modern Landing Page
+* 🚀 Fast Response Generation
+* 🧠 Context-Aware Conversations
+* 🧹 Clear Chat Functionality
+* 🔙 Back to Landing Page
+* 📱 Responsive Design
+* ⚡ Built with React + Vite
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Screenshots
+
+### Landing Page
+
+![Landing Page](./public/screenshots/landing.png)
+
+### Chat Interface
+
+![Chat Interface](./public/screenshots/chat.png)
+
+---
+
+## 🛠️ Tech Stack
+
+* React.js
+* Vite
+* JavaScript
+* CSS3
+* Gemini AI API
+
+---
+
+## 🚀 Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/anishaa-07/AI_Full-Stack-Projects.git
+```
+
+### Navigate to Project Folder
+
+```bash
+cd AI-Chatbot
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the root directory and add:
+
+```env
+VITE_GEMINI_API_KEY=YOUR_API_KEY
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+AI-Chatbot
+│
+├── public
+│   └── screenshots
+│       ├── landing.png
+│       └── chat.png
+│
+├── src
+│   ├── components
+│   │   └── Landing.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+│
+├── .env
+├── package.json
+└── README.md
+```
+
+---
+
+## 🌟 Future Improvements
+
+* 🎤 Voice Assistant
+* 🌙 Dark / Light Theme
+* 💾 Persistent Chat History
+* 📄 Export Conversations
+* 🧠 Long-Term Memory
+* 🔐 User Authentication
+
+---
+
+## 👩‍💻 Author
+
+**Anisha Ranjan**
+
+CSE Student | Full Stack Developer | Open Source Learner
+
+GitHub: https://github.com/anishaa-07
+
+---
+
+⭐ If you like this project, consider giving it a star!
