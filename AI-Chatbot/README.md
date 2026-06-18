@@ -20,18 +20,6 @@ A modern AI-powered chatbot built with React, Vite, and Google's Gemini AI. Coco
 
 ---
 
-## 📸 Screenshots
-
-### Landing Page
-
-![Landing Page](./public/screenshots/landing.png)
-
-### Chat Interface
-
-![Chat Interface](./public/screenshots/chat.png)
-
----
-
 ## 🛠️ Tech Stack
 
 * React.js
