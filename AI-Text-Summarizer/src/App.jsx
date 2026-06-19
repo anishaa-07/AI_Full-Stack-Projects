@@ -3,6 +3,7 @@ import { useState } from "react";
 
 function App() {
   const [text, setText] = useState("");
+  const [summary, setSummary] = useState("");
 
   const wordCount = text.trim()
     ? text.trim().split(/\s+/).length
@@ -26,9 +27,19 @@ function App() {
           onChange={(e) => setText(e.target.value)}
         ></textarea>
 
-        <button className="summarize-btn">
-          Summarize
-        </button>
+        <button
+  className="summarize-btn"
+  onClick={() => {
+    const shortSummary =
+      text.length > 120
+        ? text.slice(0, 120) + "..."
+        : text;
+
+    setSummary(shortSummary);
+  }}
+>
+  Summarize
+</button>
       </div>
 
       <div className="stats">
@@ -45,7 +56,7 @@ function App() {
 
       <div className="summary-box">
         <h2>Summary</h2>
-        <p>Your AI-generated summary will appear here...</p>
+        <p>{summary || "Your AI-generated summary will appear here..."}</p>
       </div>
     </div>
   );
