@@ -1,16 +1,117 @@
-# React + Vite
+# 📝 AI Text Summarizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Transform Long Text Into Clear Insights with AI 🤖
 
-Currently, two official plugins are available:
+A modern AI-powered Text Summarizer built using React, Vite, and Google's Gemini AI. This application helps users quickly convert lengthy text into concise and meaningful summaries while providing real-time text statistics and a clean, responsive user interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 🤖 AI-Powered Text Summarization using Gemini AI
+* 📊 Live Word Counter
+* 📈 Live Character Counter
+* 📋 One-Click Copy Summary
+* ✨ Modern Glassmorphism UI
+* 📱 Fully Responsive Design
+* ⚡ Fast React + Vite Performance
+* 🔒 Secure API Key Management with Environment Variables
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+* React.js
+* Vite
+* JavaScript
+* CSS3
+* Gemini AI API
+* Git & GitHub
+
+---
+
+## 📂 Project Structure
+
+```bash
+AI-Text-Summarizer/
+│
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── .gitignore
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the project folder:
+
+```bash
+cd AI-Text-Summarizer
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file and add your Gemini API key:
+
+```env
+VITE_GEMINI_API_KEY=YOUR_API_KEY
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🎯 How It Works
+
+1. Paste any text into the input field.
+2. Click the **Summarize** button.
+3. Gemini AI generates a concise summary.
+4. View word and character statistics.
+5. Copy the generated summary with one click.
+
+---
+
+## 🌟 Future Improvements
+
+* PDF Export
+* TXT Export
+* Summary Length Selection
+* Dark/Light Mode Toggle
+* Voice Input Support
+* Summary History
+
+---
+
+## 👩‍💻 Author
+
+**Anisha Ranjan**
+
+Building AI & Full Stack Projects through Project Nova 🚀
+
+GitHub: https://github.com/anishaa-07
+
+```
+```
