@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #111827);
+  color: white;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 35px;
+  font-size: 1.1rem;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-input {
+  width: 100%;
+  min-height: 250px;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+}
+
+.text-input::placeholder {
+  color: #94a3b8;
+}
+
+.summarize-btn {
+  align-self: center;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #8b5cf6, #2563eb);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stats {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  color: #94a3b8;
+}
+
+.summary-box {
+  margin-top: 30px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 25px;
+}
+
+.summary-box h2 {
+  margin-bottom: 15px;
+}
+
+.summary-box p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+}
