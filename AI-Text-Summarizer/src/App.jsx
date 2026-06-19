@@ -1,4 +1,15 @@
+import "./App.css";
+import { useState } from "react";
+
 function App() {
+  const [text, setText] = useState("");
+
+  const wordCount = text.trim()
+    ? text.trim().split(/\s+/).length
+    : 0;
+
+  const charCount = text.length;
+
   return (
     <div className="container">
       <h1>📝 AI Text Summarizer</h1>
@@ -11,6 +22,8 @@ function App() {
         <textarea
           className="text-input"
           placeholder="Paste your text here..."
+          value={text}
+          onChange={(e) => setText(e.target.value)}
         ></textarea>
 
         <button className="summarize-btn">
@@ -20,12 +33,12 @@ function App() {
 
       <div className="stats">
         <div className="stat-card">
-          <h3>0</h3>
+          <h3>{wordCount}</h3>
           <p>Words</p>
         </div>
 
         <div className="stat-card">
-          <h3>0</h3>
+          <h3>{charCount}</h3>
           <p>Characters</p>
         </div>
       </div>
