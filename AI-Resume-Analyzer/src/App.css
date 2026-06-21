@@ -58,3 +58,19 @@ button:hover {
   transform: translateY(-2px);
   transition: 0.3s;
 }
+
+.result pre {
+  white-space: pre-wrap;
+}
+
+.result p {
+  line-height: 1.8;
+}
+
+.result ul {
+  margin-top: 10px;
+}
+
+.result li {
+  margin-bottom: 8px;
+}

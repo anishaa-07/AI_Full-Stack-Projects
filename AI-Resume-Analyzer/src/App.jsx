@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import { analyzeResumeWithAI } from "./services/gemini";
 import { useState } from "react";
 import "./App.css";
@@ -10,7 +11,9 @@ function App() {
   const [aiResponse, setAiResponse] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const analyzeResume = () => {
+  const analyzeResume = async () => {
+    setLoading(true);
+
     const skills = [
       "java",
       "python",
@@ -46,6 +49,16 @@ function App() {
         "Needs improvement. Add technical skills and projects."
       );
     }
+
+    try {
+      const result = await analyzeResumeWithAI(resume);
+      setAiResponse(result);
+    } catch (error) {
+      setAiResponse("Error analyzing resume.");
+      console.error(error);
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -84,6 +97,18 @@ function App() {
       <div className="result">
         <h2>Suggestions</h2>
         <p>{suggestion}</p>
+      </div>
+
+      <div className="result">
+        <h2>🤖 AI Analysis</h2>
+
+        {loading ? (
+          <p>Analyzing Resume...</p>
+        ) : (
+          <ReactMarkdown>
+            {aiResponse}
+          </ReactMarkdown>
+        )}
       </div>
     </div>
   );
