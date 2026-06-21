@@ -4,50 +4,13 @@ import "./App.css";
 
 function App() {
   const [resume, setResume] = useState("");
-  const [score, setScore] = useState(0);
-  const [detectedSkills, setDetectedSkills] = useState([]);
-  const [suggestion, setSuggestion] = useState("");
   const [aiResponse, setAiResponse] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const analyzeResume = async () => {
+    if (!resume.trim()) return;
+
     setLoading(true);
-
-    const skills = [
-      "java",
-      "python",
-      "javascript",
-      "react",
-      "node",
-      "mongodb",
-      "sql",
-      "git",
-    ];
-
-    const found = [];
-
-    skills.forEach((skill) => {
-      if (resume.toLowerCase().includes(skill)) {
-        found.push(skill);
-      }
-    });
-
-    setDetectedSkills(found);
-    setScore(found.length * 10);
-
-    if (found.length >= 6) {
-      setSuggestion(
-        "Excellent resume! You have strong technical skills."
-      );
-    } else if (found.length >= 3) {
-      setSuggestion(
-        "Good resume. Try adding more relevant skills."
-      );
-    } else {
-      setSuggestion(
-        "Needs improvement. Add technical skills and projects."
-      );
-    }
 
     try {
       const result = await analyzeResumeWithAI(resume);
@@ -70,9 +33,12 @@ function App() {
     <div className="container">
       <h1>🤖 AI Resume Analyzer Pro</h1>
 
+      <p className="tagline">
+        Transform Your Resume Into Interview Opportunities
+      </p>
+
       <textarea
         placeholder="Paste your resume here..."
-        rows="12"
         value={resume}
         onChange={(e) => setResume(e.target.value)}
       />
@@ -82,36 +48,16 @@ function App() {
       </button>
 
       <div className="result">
-        <h2>Resume Score: {score}/100</h2>
-      </div>
-
-      <div className="result">
-        <h2>Detected Skills</h2>
-
-        {detectedSkills.length > 0 ? (
-          <ul>
-            {detectedSkills.map((skill, index) => (
-              <li key={index}>{skill}</li>
-            ))}
-          </ul>
-        ) : (
-          <p>No skills detected yet.</p>
-        )}
-      </div>
-
-      <div className="result">
-        <h2>Suggestions</h2>
-        <p>{suggestion}</p>
-      </div>
-
-      <div className="result">
         <h2>🤖 AI Analysis</h2>
 
         {loading ? (
           <p>Analyzing Resume...</p>
         ) : aiResponse ? (
           <>
-            <h3>ATS Score: {aiResponse.atsScore}/100</h3>
+            <div className="ats-card">
+              <h2>{aiResponse.atsScore}</h2>
+              <p>ATS Score</p>
+            </div>
 
             <h3>✅ Strengths</h3>
             <ul>
@@ -135,7 +81,7 @@ function App() {
             </ul>
           </>
         ) : (
-          <p>Analyze a resume to see AI insights.</p>
+          <p>Paste your resume and click Analyze Resume.</p>
         )}
       </div>
     </div>
