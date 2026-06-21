@@ -19,16 +19,6 @@ function App() {
       "git",
     ];
 
-    if (found.length >= 6) {
-  setSuggestion("Excellent resume! You have strong technical skills.");
-} else if (found.length >= 3) {
-  setSuggestion("Good resume. Try adding more relevant skills.");
-} else {
-  setSuggestion(
-    "Needs improvement. Add technical skills and projects."
-  );
-}
-
     const found = [];
 
     skills.forEach((skill) => {
@@ -39,6 +29,20 @@ function App() {
 
     setDetectedSkills(found);
     setScore(found.length * 10);
+
+    if (found.length >= 6) {
+      setSuggestion(
+        "Excellent resume! You have strong technical skills."
+      );
+    } else if (found.length >= 3) {
+      setSuggestion(
+        "Good resume. Try adding more relevant skills."
+      );
+    } else {
+      setSuggestion(
+        "Needs improvement. Add technical skills and projects."
+      );
+    }
   };
 
   return (
@@ -74,11 +78,10 @@ function App() {
         )}
       </div>
 
-        <div className="result">
-  <h2>Suggestions</h2>
-  <p>{suggestion}</p>
-</div>
-
+      <div className="result">
+        <h2>Suggestions</h2>
+        <p>{suggestion}</p>
+      </div>
     </div>
   );
 }
