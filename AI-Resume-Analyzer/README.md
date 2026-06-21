@@ -1,16 +1,146 @@
-# React + Vite
+# 🤖 AI Resume Analyzer Pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered resume analysis tool that evaluates resumes, generates ATS scores, identifies strengths and weaknesses, and provides personalized improvement suggestions using Google's Gemini AI.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* 📄 Resume Text Analysis
+* 🤖 Gemini AI Integration
+* 📊 ATS Score Generation
+* ✅ Strengths Detection
+* ⚠️ Weakness Identification
+* 💡 Smart Improvement Suggestions
+* 🎨 Modern Glassmorphism UI
+* 🍷 Premium Wine-Themed Design
+* 📱 Responsive Layout
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🖼️ Preview
 
-## Expanding the ESLint configuration
+Analyze your resume and instantly receive:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* ATS Score
+* Strengths
+* Weaknesses
+* Improvement Suggestions
+
+All powered by AI.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React
+* Vite
+* CSS3
+
+### AI
+
+* Google Gemini API
+* @google/genai
+
+---
+
+## 📂 Project Structure
+
+```bash
+AI-Resume-Analyzer-Pro
+│
+├── public
+│
+├── src
+│   ├── services
+│   │   └── gemini.js
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+│
+├── .env
+├── package.json
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/your-username/AI_Full-Stack-Projects.git
+```
+
+### Navigate to Project
+
+```bash
+cd AI-Resume-Analyzer
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Create Environment File
+
+```env
+VITE_GEMINI_API_KEY=YOUR_API_KEY
+```
+
+### Run Project
+
+```bash
+npm run dev
+```
+
+---
+
+## 🎯 How It Works
+
+1. Paste resume content.
+2. Click **Analyze Resume**.
+3. Gemini AI evaluates the resume.
+4. ATS Score is generated.
+5. Strengths and weaknesses are identified.
+6. Personalized suggestions are displayed.
+
+---
+
+## 🚀 Future Improvements
+
+* PDF Resume Upload
+* Drag & Drop Support
+* Resume Keyword Matching
+* Industry-Specific Analysis
+* Download AI Report as PDF
+* Dark/Light Theme Toggle
+* Resume Comparison Feature
+
+---
+
+## 🌟 Learning Outcomes
+
+This project helped me learn:
+
+* React State Management
+* API Integration
+* Gemini AI SDK
+* Prompt Engineering
+* UI/UX Design
+* Environment Variables
+* Building Real-World AI Applications
+
+---
+
+## 👩‍💻 Author
+
+**Anisha Ranjan**
+
+B.Tech CSE Student | Full Stack Developer | AI Enthusiast
+
+Building one project every day through **Project Nova 🚀**

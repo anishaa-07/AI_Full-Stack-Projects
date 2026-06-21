@@ -19,28 +19,45 @@ body{
 }
 
 .container{
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
   padding: 50px 20px;
 }
+
+/* Heading */
 
 h1{
   text-align: center;
   font-size: 4rem;
   font-weight: 800;
-  margin-bottom: 35px;
   line-height: 1.2;
+  margin-bottom: 8px;
 
   background: linear-gradient(
     90deg,
-    #ff9dbb,
-    #d94675,
-    #8b1e3f
+    #f7e6eb,
+    #e6c4cf,
+    #d6a3b4
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.tagline{
+  text-align: center;
+  margin-bottom: 35px;
+
+  color: #d7b9c4;
+
+  font-size: 0.95rem;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+/* Textarea */
 
 textarea{
   width: 100%;
@@ -69,12 +86,16 @@ textarea{
 
 textarea:focus{
   border-color: #c2185b;
-  box-shadow: 0 0 25px rgba(194,24,91,0.4);
+
+  box-shadow:
+    0 0 25px rgba(194,24,91,0.4);
 }
 
 textarea::placeholder{
   color: #d7b9c4;
 }
+
+/* Button */
 
 button{
   width: 100%;
@@ -109,8 +130,10 @@ button:hover{
   transform: translateY(-4px);
 
   box-shadow:
-    0 0 30px rgba(194,24,91,0.4);
+    0 0 30px rgba(194,24,91,0.45);
 }
+
+/* Cards */
 
 .result{
   margin-top: 25px;
@@ -132,13 +155,13 @@ button:hover{
 .result h2{
   text-align: center;
 
-  margin-bottom: 15px;
+  color: #ffbfd1;
 
-  color: #ffb3c7;
+  margin-bottom: 20px;
 }
 
 .result h3{
-  color: #ffc4d6;
+  color: #ffd5e1;
 
   margin-top: 20px;
 
@@ -150,7 +173,6 @@ button:hover{
 }
 
 .result ul{
-  margin-top: 10px;
   padding-left: 20px;
 }
 
@@ -158,11 +180,13 @@ button:hover{
   margin-bottom: 10px;
 }
 
+/* ATS Circle */
+
 .ats-card{
   width: 220px;
   height: 220px;
 
-  margin: 20px auto;
+  margin: 25px auto;
 
   border-radius: 50%;
 
@@ -184,15 +208,23 @@ button:hover{
 
 .ats-card h2{
   font-size: 4rem;
-  color: white;
+
   margin: 0;
+
+  color: white;
 }
 
 .ats-card p{
   color: white;
+
+  margin-top: 5px;
+
   font-size: 1rem;
+
   letter-spacing: 1px;
 }
+
+/* Scrollbar */
 
 ::-webkit-scrollbar{
   width: 10px;
@@ -209,4 +241,27 @@ button:hover{
 
 ::-webkit-scrollbar-thumb:hover{
   background: #c2185b;
+}
+
+/* Responsive */
+
+@media (max-width: 768px){
+
+  h1{
+    font-size: 2.5rem;
+  }
+
+  .tagline{
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  .ats-card{
+    width: 170px;
+    height: 170px;
+  }
+
+  .ats-card h2{
+    font-size: 3rem;
+  }
 }
