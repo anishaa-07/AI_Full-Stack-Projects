@@ -1,3 +1,4 @@
+import { analyzeResumeWithAI } from "./services/gemini";
 import { useState } from "react";
 import "./App.css";
 
@@ -6,6 +7,8 @@ function App() {
   const [score, setScore] = useState(0);
   const [detectedSkills, setDetectedSkills] = useState([]);
   const [suggestion, setSuggestion] = useState("");
+  const [aiResponse, setAiResponse] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const analyzeResume = () => {
     const skills = [
