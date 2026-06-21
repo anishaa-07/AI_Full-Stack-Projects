@@ -11,22 +11,35 @@ export const analyzeResumeWithAI = async (resumeText) => {
       contents: `
 You are an expert ATS Resume Analyzer.
 
-Analyze this resume and provide:
+Analyze the resume and return ONLY valid JSON.
 
-1. ATS Score (out of 100)
-2. Strengths
-3. Weaknesses
-4. Missing Skills
-5. Improvement Suggestions
+{
+  "atsScore": 0,
+  "strengths": [],
+  "weaknesses": [],
+  "suggestions": []
+}
+
+Do not return markdown.
+Do not return explanations.
+Return only JSON.
 
 Resume:
 ${resumeText}
       `,
     });
 
-    return response.text;
+    const text = response.text.trim();
+
+    return JSON.parse(text);
   } catch (error) {
     console.error(error);
-    return "Error analyzing resume.";
+
+    return {
+      atsScore: 0,
+      strengths: [],
+      weaknesses: [],
+      suggestions: ["Failed to analyze resume"],
+    };
   }
 };

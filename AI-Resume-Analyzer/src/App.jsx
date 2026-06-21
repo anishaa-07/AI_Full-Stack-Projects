@@ -1,4 +1,3 @@
-import ReactMarkdown from "react-markdown";
 import { analyzeResumeWithAI } from "./services/gemini";
 import { useState } from "react";
 import "./App.css";
@@ -8,7 +7,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [detectedSkills, setDetectedSkills] = useState([]);
   const [suggestion, setSuggestion] = useState("");
-  const [aiResponse, setAiResponse] = useState("");
+  const [aiResponse, setAiResponse] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const analyzeResume = async () => {
@@ -54,8 +53,14 @@ function App() {
       const result = await analyzeResumeWithAI(resume);
       setAiResponse(result);
     } catch (error) {
-      setAiResponse("Error analyzing resume.");
       console.error(error);
+
+      setAiResponse({
+        atsScore: 0,
+        strengths: [],
+        weaknesses: [],
+        suggestions: ["Failed to analyze resume"],
+      });
     }
 
     setLoading(false);
@@ -63,7 +68,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>🤖 AI Resume Analyzer</h1>
+      <h1>🤖 AI Resume Analyzer Pro</h1>
 
       <textarea
         placeholder="Paste your resume here..."
@@ -104,10 +109,33 @@ function App() {
 
         {loading ? (
           <p>Analyzing Resume...</p>
+        ) : aiResponse ? (
+          <>
+            <h3>ATS Score: {aiResponse.atsScore}/100</h3>
+
+            <h3>✅ Strengths</h3>
+            <ul>
+              {aiResponse.strengths?.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+            <h3>⚠ Weaknesses</h3>
+            <ul>
+              {aiResponse.weaknesses?.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+            <h3>💡 Suggestions</h3>
+            <ul>
+              {aiResponse.suggestions?.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </>
         ) : (
-          <ReactMarkdown>
-            {aiResponse}
-          </ReactMarkdown>
+          <p>Analyze a resume to see AI insights.</p>
         )}
       </div>
     </div>

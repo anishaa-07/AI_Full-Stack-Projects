@@ -74,3 +74,84 @@ button:hover {
 .result li {
   margin-bottom: 8px;
 }
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e1b4b);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.result {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+textarea {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+textarea::placeholder {
+  color: #cbd5e1;
+}
+
+button {
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #2563eb
+  );
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(
+    90deg,
+    #a855f7,
+    #60a5fa
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ats-card {
+  width: 180px;
+  height: 180px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #2563eb
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    0 0 30px rgba(124,58,237,.5);
+}
+
+.ats-card h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.ats-card p {
+  margin: 0;
+}
