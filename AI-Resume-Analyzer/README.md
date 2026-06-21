@@ -1,4 +1,4 @@
-# 🤖 AI Resume Analyzer Pro
+# 🤖 AI Resume Analyzer 
 
 An AI-powered resume analysis tool that evaluates resumes, generates ATS scores, identifies strengths and weaknesses, and provides personalized improvement suggestions using Google's Gemini AI.
 
