@@ -48,28 +48,28 @@ Project Nova is my personal challenge to build real-world projects consistently 
 # 📈 Progress Tracker
 
 ```text
-Completed Projects: 2 / 30
+Completed Projects: 3 / 30
 
-██░░░░░░░░░░░░░░░░░░░░░░░░░░ 7%
+███░░░░░░░░░░░░░░░░░░░░░░░░░ 10%
 ```
 
 ---
 
 # 🗂️ Project Roadmap
 
-| Day   | Project               | Status        |
-| ----- | --------------------- | ------------- |
-| 01    | 🤖 Coco AI Chatbot    | ✅ Completed   |
-| 02    | 📝 AI Text Summarizer | ✅ Completed   |
-| 03    | 🌦 Weather App        | ⏳ Coming Soon |
-| 04    | 💰 Expense Tracker    | ⏳ Coming Soon |
-| 05    | 🌐 Portfolio Website  | ⏳ Coming Soon |
-| 06    | 🎬 Movie Search App   | ⏳ Coming Soon |
-| 07    | 🔐 Password Generator | ⏳ Coming Soon |
-| 08    | 📝 Notes App          | ⏳ Coming Soon |
-| 09    | ❓ Quiz App            | ⏳ Coming Soon |
-| 10    | 📄 AI Resume Analyzer | ⏳ Coming Soon |
-| 11-30 | 🚀 More Projects      | In Progress   |
+| Day   | Project                   | Status        |
+| ----- | ------------------------- | ------------- |
+| 01    | 🤖 Coco AI Chatbot        | ✅ Completed   |
+| 02    | 📝 AI Text Summarizer     | ✅ Completed   |
+| 03    | 📄 AI Resume Analyzer Pro | ✅ Completed   |
+| 04    | 🌦 Weather App            | ⏳ Coming Soon |
+| 05    | 💰 Expense Tracker        | ⏳ Coming Soon |
+| 06    | 🌐 Portfolio Website      | ⏳ Coming Soon |
+| 07    | 🎬 Movie Search App       | ⏳ Coming Soon |
+| 08    | 🔐 Password Generator     | ⏳ Coming Soon |
+| 09    | 📝 Notes App              | ⏳ Coming Soon |
+| 10    | ❓ Quiz App                | ⏳ Coming Soon |
+| 11-30 | 🚀 More Projects          | In Progress   |
 
 ---
 
@@ -119,6 +119,30 @@ AI-Text-Summarizer/
 
 ---
 
+## 3. AI Resume Analyzer Pro
+
+An AI-powered ATS Resume Analyzer that evaluates resumes using Gemini AI and provides intelligent career insights.
+
+### Features
+
+* ATS Score Generation
+* AI-Powered Resume Analysis
+* Strength Detection
+* Weakness Detection
+* Personalized Suggestions
+* Gemini AI Integration
+* Premium Glassmorphism UI
+* Wine Theme Design
+* Responsive Layout
+
+📂 Folder:
+
+```text
+AI-Resume-Analyzer/
+```
+
+---
+
 # 🛠️ Tech Stack
 
 ### Frontend
@@ -160,6 +184,9 @@ AI_Full-Stack-Projects
 ├── AI-Text-Summarizer/
 │   └── README.md
 │
+├── AI-Resume-Analyzer/
+│   └── README.md
+│
 ├── Weather-App/
 │
 ├── Expense-Tracker/
@@ -175,11 +202,23 @@ AI_Full-Stack-Projects
 const anisha = {
   role: "Full Stack Developer",
   currentlyBuilding: "Project Nova",
-  completedProjects: 2,
-  nextProject: "AI Resume Analyzer",
+  completedProjects: 3,
+  nextProject: "Weather App",
   goal: "Become a Software Engineer",
 };
 ```
+
+---
+
+# 🎯 2026 Goals
+
+* Complete 30 Projects
+* Strengthen Full Stack Development
+* Master React Ecosystem
+* Build Strong GitHub Portfolio
+* Improve Problem Solving Skills
+* Become Industry Ready
+* Secure Software Engineering Opportunities
 
 ---
 
@@ -193,10 +232,14 @@ https://github.com/anishaa-07
 
 <div align="center">
 
-## ⭐ Project Nova Progress
+# ⭐ Project Nova Progress
 
-2 / 30 Projects Completed
+### 3 / 30 Projects Completed
 
 Building. Learning. Improving. Every Day.
+
+🚀 Day 3 Completed Successfully
+
+✨ Next Project: Weather App
 
 </div>
