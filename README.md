@@ -48,28 +48,32 @@ Project Nova is my personal challenge to build real-world projects consistently 
 # 📈 Progress Tracker
 
 ```text
-Completed Projects: 3 / 30
+Completed Projects: 4 / 15
 
-███░░░░░░░░░░░░░░░░░░░░░░░░░ 10%
+████████░░░░░░░░░░░░ 27%
 ```
 
 ---
 
 # 🗂️ Project Roadmap
 
-| Day   | Project                   | Status        |
-| ----- | ------------------------- | ------------- |
-| 01    | 🤖 Coco AI Chatbot        | ✅ Completed   |
-| 02    | 📝 AI Text Summarizer     | ✅ Completed   |
-| 03    | 📄 AI Resume Analyzer Pro | ✅ Completed   |
-| 04    | 🌦 Weather App            | ⏳ Coming Soon |
-| 05    | 💰 Expense Tracker        | ⏳ Coming Soon |
-| 06    | 🌐 Portfolio Website      | ⏳ Coming Soon |
-| 07    | 🎬 Movie Search App       | ⏳ Coming Soon |
-| 08    | 🔐 Password Generator     | ⏳ Coming Soon |
-| 09    | 📝 Notes App              | ⏳ Coming Soon |
-| 10    | ❓ Quiz App                | ⏳ Coming Soon |
-| 11-30 | 🚀 More Projects          | In Progress   |
+| Day | Project                               | Status        |
+| --- | ------------------------------------- | ------------- |
+| 01  | 🤖 Coco AI Chatbot                    | ✅ Completed   |
+| 02  | 📝 AI Text Summarizer                 | ✅ Completed   |
+| 03  | 📄 AI Resume Analyzer Pro             | ✅ Completed   |
+| 04  | 🤖 AI Code Reviewer                   | ✅ Completed   |
+| 05  | 🎤 AI Interview Preparation Assistant | ⏳ Coming Soon |
+| 06  | ✉️ AI Cover Letter Generator          | ⏳ Coming Soon |
+| 07  | 📚 AI Study Notes Generator           | ⏳ Coming Soon |
+| 08  | ❓ AI MCQ Generator                    | ⏳ Coming Soon |
+| 09  | 💰 Expense Tracker                    | ⏳ Coming Soon |
+| 10  | 🌦 Weather Dashboard                  | ⏳ Coming Soon |
+| 11  | 🎬 Movie Explorer                     | ⏳ Coming Soon |
+| 12  | ✅ Task Manager                        | ⏳ Coming Soon |
+| 13  | 🌐 Portfolio Website                  | ⏳ Coming Soon |
+| 14  | 👨‍💻 DevConnect                      | ⏳ Coming Soon |
+| 15  | 💼 Job Application Tracker            | ⏳ Coming Soon |
 
 ---
 
@@ -143,6 +147,29 @@ AI-Resume-Analyzer/
 
 ---
 
+## 4. AI Code Reviewer
+
+An AI-powered code review application that analyzes code snippets and provides intelligent feedback using Gemini AI.
+
+### Features
+
+* AI-Powered Code Analysis
+* Bug Detection
+* Code Improvement Suggestions
+* Performance Optimization Tips
+* Best Practice Recommendations
+* Gemini AI Integration
+* Premium Wine Theme UI
+* React + Vite
+
+📂 Folder:
+
+```text
+AI-Code-Reviewer/
+```
+
+---
+
 # 🛠️ Tech Stack
 
 ### Frontend
@@ -187,9 +214,8 @@ AI_Full-Stack-Projects
 ├── AI-Resume-Analyzer/
 │   └── README.md
 │
-├── Weather-App/
-│
-├── Expense-Tracker/
+├── AI-Code-Reviewer/
+│   └── README.md
 │
 └── README.md
 ```
@@ -202,8 +228,8 @@ AI_Full-Stack-Projects
 const anisha = {
   role: "Full Stack Developer",
   currentlyBuilding: "Project Nova",
-  completedProjects: 3,
-  nextProject: "Weather App",
+  completedProjects: 4,
+  nextProject: "AI Interview Preparation Assistant",
   goal: "Become a Software Engineer",
 };
 ```
@@ -212,7 +238,7 @@ const anisha = {
 
 # 🎯 2026 Goals
 
-* Complete 30 Projects
+* Complete 15 High-Impact Projects
 * Strengthen Full Stack Development
 * Master React Ecosystem
 * Build Strong GitHub Portfolio
@@ -234,12 +260,12 @@ https://github.com/anishaa-07
 
 # ⭐ Project Nova Progress
 
-### 3 / 30 Projects Completed
+### 4 / 15 Projects Completed
 
 Building. Learning. Improving. Every Day.
 
-🚀 Day 3 Completed Successfully
+🚀 Day 4 Completed Successfully
 
-✨ Next Project: Weather App
+✨ Next Project: AI Interview Preparation Assistant
 
 </div>
