@@ -28,7 +28,7 @@ function App() {
       <h1>🤖 AI Code Reviewer</h1>
 
       <p className="subtitle">
-        Paste your code and get instant AI feedback
+        Paste your code and get instant AI feedback !!
       </p>
 
       <textarea
