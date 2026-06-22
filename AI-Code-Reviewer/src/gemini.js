@@ -5,21 +5,23 @@ const ai = new GoogleGenAI({
 });
 
 export async function reviewCode(code) {
-  const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
-    contents: `
-You are an expert software engineer.
+  try {
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: `You are an expert software engineer.
 
-Review the following code and provide:
-1. Bugs or issues
-2. Code improvements
-3. Performance optimizations
-4. Best practices
+Review this code and provide:
+1. Bugs
+2. Improvements
+3. Best Practices
 
 Code:
-${code}
-`,
-  });
+${code}`,
+    });
 
-  return response.text;
+    return response.text;
+  } catch (error) {
+    console.error("Gemini Error:", error);
+    return `Error: ${error.message}`;
+  }
 }

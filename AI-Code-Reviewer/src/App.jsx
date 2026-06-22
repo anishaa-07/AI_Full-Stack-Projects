@@ -8,18 +8,18 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const handleReview = async () => {
-    if (!code.trim()) return;
+    console.log("Button clicked");
+
+    if (!code.trim()) {
+      setResult("Please enter some code first.");
+      return;
+    }
 
     setLoading(true);
 
-    try {
-      const feedback = await reviewCode(code);
-      setResult(feedback);
-    } catch (error) {
-      setResult("Error reviewing code.");
-      console.error(error);
-    }
+    const feedback = await reviewCode(code);
 
+    setResult(feedback);
     setLoading(false);
   };
 
@@ -38,10 +38,7 @@ function App() {
         onChange={(e) => setCode(e.target.value)}
       />
 
-      <button
-        className="review-btn"
-        onClick={handleReview}
-      >
+      <button className="review-btn" onClick={handleReview}>
         {loading ? "Reviewing..." : "Review Code"}
       </button>
 
