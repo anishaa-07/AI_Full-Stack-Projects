@@ -48,9 +48,9 @@ Project Nova is my personal challenge to build real-world projects consistently 
 # 📈 Progress Tracker
 
 ```text
-Completed Projects: 4 / 15
+Completed Projects: 5 / 15
 
-████████░░░░░░░░░░░░ 27%
+██████████░░░░░░░░░░ 33%
 ```
 
 ---
@@ -63,7 +63,7 @@ Completed Projects: 4 / 15
 | 02  | 📝 AI Text Summarizer                 | ✅ Completed   |
 | 03  | 📄 AI Resume Analyzer Pro             | ✅ Completed   |
 | 04  | 🤖 AI Code Reviewer                   | ✅ Completed   |
-| 05  | 🎤 AI Interview Preparation Assistant | ⏳ Coming Soon |
+| 05  | 🎤 AI Interview Preparation Assistant | ✅ Completed   |
 | 06  | ✉️ AI Cover Letter Generator          | ⏳ Coming Soon |
 | 07  | 📚 AI Study Notes Generator           | ⏳ Coming Soon |
 | 08  | ❓ AI MCQ Generator                    | ⏳ Coming Soon |
@@ -170,6 +170,32 @@ AI-Code-Reviewer/
 
 ---
 
+## 5. AI Interview Preparation Assistant
+
+An AI-powered interview preparation platform designed to help users practice technical interview questions across multiple domains and difficulty levels.
+
+### Features
+
+* Java Interview Questions
+* DSA Interview Questions
+* Frontend Interview Questions
+* Backend Interview Questions
+* Easy, Medium & Hard Levels
+* Random Question Generator
+* Next Question Functionality
+* Gemini AI Integration
+* AI Question Generation Support
+* Responsive UI
+* React + Vite
+
+📂 Folder:
+
+```text
+AI-Interview-Assistant/
+```
+
+---
+
 # 🛠️ Tech Stack
 
 ### Frontend
@@ -217,6 +243,9 @@ AI_Full-Stack-Projects
 ├── AI-Code-Reviewer/
 │   └── README.md
 │
+├── AI-Interview-Assistant/
+│   └── README.md
+│
 └── README.md
 ```
 
@@ -228,8 +257,8 @@ AI_Full-Stack-Projects
 const anisha = {
   role: "Full Stack Developer",
   currentlyBuilding: "Project Nova",
-  completedProjects: 4,
-  nextProject: "AI Interview Preparation Assistant",
+  completedProjects: 5,
+  nextProject: "AI Cover Letter Generator",
   goal: "Become a Software Engineer",
 };
 ```
@@ -260,12 +289,12 @@ https://github.com/anishaa-07
 
 # ⭐ Project Nova Progress
 
-### 4 / 15 Projects Completed
+### 5 / 15 Projects Completed
 
 Building. Learning. Improving. Every Day.
 
-🚀 Day 4 Completed Successfully
+🚀 Day 5 Completed Successfully
 
-✨ Next Project: AI Interview Preparation Assistant
+✨ Next Project: AI Cover Letter Generator
 
 </div>
