@@ -65,6 +65,13 @@ function App() {
             <p className="hint">
               {currentQuestion.hint}
             </p>
+
+            <button
+            className="next-btn"
+            onClick={generateQuestion}
+            >
+             Next Question →
+              </button>
           </div>
         )}
       </div>

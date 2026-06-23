@@ -8,6 +8,14 @@ const questions = {
       {
         question: "What is a Class and Object?",
         hint: "Class is a blueprint, Object is an instance of a class."
+      },
+      {
+        question: "What is a Constructor?",
+        hint: "Special method used to initialize objects."
+      },
+      {
+        question: "What is the difference between == and equals()?",
+        hint: "Reference comparison vs content comparison."
       }
     ],
 
@@ -15,6 +23,14 @@ const questions = {
       {
         question: "Difference between ArrayList and LinkedList?",
         hint: "Compare storage, insertion and access time."
+      },
+      {
+        question: "What is Method Overloading?",
+        hint: "Same method name with different parameters."
+      },
+      {
+        question: "What is Method Overriding?",
+        hint: "Redefining a parent class method in child class."
       }
     ],
 
@@ -22,6 +38,14 @@ const questions = {
       {
         question: "Explain JVM, JRE and JDK.",
         hint: "Focus on their roles in Java execution."
+      },
+      {
+        question: "What is Garbage Collection?",
+        hint: "Automatic memory management in Java."
+      },
+      {
+        question: "Explain Multithreading in Java.",
+        hint: "Running multiple threads concurrently."
       }
     ]
   },
@@ -31,6 +55,14 @@ const questions = {
       {
         question: "What is an Array?",
         hint: "Collection of elements stored in contiguous memory."
+      },
+      {
+        question: "What is a Linked List?",
+        hint: "Nodes connected using pointers."
+      },
+      {
+        question: "What is a Stack?",
+        hint: "LIFO data structure."
       }
     ],
 
@@ -38,6 +70,14 @@ const questions = {
       {
         question: "Difference between Stack and Queue?",
         hint: "LIFO vs FIFO."
+      },
+      {
+        question: "What is Binary Search?",
+        hint: "Search in sorted array with O(log n)."
+      },
+      {
+        question: "What is Recursion?",
+        hint: "Function calling itself."
       }
     ],
 
@@ -45,6 +85,14 @@ const questions = {
       {
         question: "Explain Time Complexity.",
         hint: "Discuss Big O notation."
+      },
+      {
+        question: "What is Dynamic Programming?",
+        hint: "Store subproblem results to avoid recomputation."
+      },
+      {
+        question: "What is a Balanced Binary Tree?",
+        hint: "Height difference should be minimal."
       }
     ]
   },
@@ -54,6 +102,14 @@ const questions = {
       {
         question: "What is HTML?",
         hint: "Structure of a web page."
+      },
+      {
+        question: "What is CSS?",
+        hint: "Used for styling web pages."
+      },
+      {
+        question: "What is JavaScript?",
+        hint: "Adds interactivity to websites."
       }
     ],
 
@@ -61,6 +117,14 @@ const questions = {
       {
         question: "Difference between Flexbox and Grid?",
         hint: "One-dimensional vs two-dimensional layout."
+      },
+      {
+        question: "What is DOM?",
+        hint: "Document Object Model."
+      },
+      {
+        question: "What are ES6 Features?",
+        hint: "Arrow functions, let/const, template literals."
       }
     ],
 
@@ -68,6 +132,14 @@ const questions = {
       {
         question: "What is Virtual DOM?",
         hint: "React optimization technique."
+      },
+      {
+        question: "Explain React Hooks.",
+        hint: "Functions that let you use state and lifecycle features."
+      },
+      {
+        question: "What is State Management?",
+        hint: "Managing application data efficiently."
       }
     ]
   },
@@ -77,6 +149,14 @@ const questions = {
       {
         question: "What is Node.js?",
         hint: "JavaScript runtime environment."
+      },
+      {
+        question: "What is Express.js?",
+        hint: "Backend framework for Node.js."
+      },
+      {
+        question: "What is a Server?",
+        hint: "Handles requests and responses."
       }
     ],
 
@@ -84,6 +164,14 @@ const questions = {
       {
         question: "What is REST API?",
         hint: "Client-server communication using HTTP."
+      },
+      {
+        question: "What are HTTP Methods?",
+        hint: "GET, POST, PUT, DELETE."
+      },
+      {
+        question: "What is Middleware?",
+        hint: "Functions executed between request and response."
       }
     ],
 
@@ -91,6 +179,14 @@ const questions = {
       {
         question: "Explain Authentication vs Authorization.",
         hint: "Identity vs Permissions."
+      },
+      {
+        question: "What is JWT?",
+        hint: "JSON Web Token used for authentication."
+      },
+      {
+        question: "What is Database Indexing?",
+        hint: "Improves query performance."
       }
     ]
   }
