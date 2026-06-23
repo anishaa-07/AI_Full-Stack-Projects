@@ -1,20 +1,67 @@
 import questions from "./data/questions.js";
 import { useState } from "react";
+import { model } from "./services/gemini";
 import "./styles/App.css";
 
 function App() {
   const [category, setCategory] = useState("java");
   const [difficulty, setDifficulty] = useState("easy");
-  const [currentQuestion, setCurrentQuestion] = useState(null);
+  const [currentQuestion, setCurrentQuestion] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const generateQuestion = () => {
+  // Offline Question Generator
+  const generateOfflineQuestion = () => {
     const selectedQuestions = questions[category][difficulty];
 
     const randomIndex = Math.floor(
       Math.random() * selectedQuestions.length
     );
 
-    setCurrentQuestion(selectedQuestions[randomIndex]);
+    const question = selectedQuestions[randomIndex];
+
+    setCurrentQuestion(`
+Question:
+${question.question}
+
+Hint:
+${question.hint}
+`);
+  };
+
+  // AI Question Generator
+  const generateAIQuestion = async () => {
+    try {
+      setLoading(true);
+
+      const prompt = `
+Generate one ${difficulty} level ${category} interview question.
+
+Return in this exact format:
+
+Question:
+<question>
+
+Answer:
+<answer>
+
+Explanation:
+<explanation>
+`;
+
+      const result = await model.generateContent(prompt);
+      const response = await result.response;
+      const text = response.text();
+
+      setCurrentQuestion(text);
+    } catch (error) {
+      console.error(error);
+
+      setCurrentQuestion(
+        "⚠️ Gemini API quota exceeded or unavailable.\n\nPlease use 'Generate Question' for offline interview questions."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -47,8 +94,12 @@ function App() {
             <option value="hard">Hard</option>
           </select>
 
-          <button onClick={generateQuestion}>
+          <button onClick={generateOfflineQuestion}>
             Generate Question
+          </button>
+
+          <button onClick={generateAIQuestion}>
+            {loading ? "Generating..." : "Generate AI Question"}
           </button>
         </div>
 
@@ -56,22 +107,22 @@ function App() {
           <div className="question-card">
             <h2>Interview Question</h2>
 
-            <p className="question">
-              {currentQuestion.question}
-            </p>
-
-            <h3>Hint</h3>
-
-            <p className="hint">
-              {currentQuestion.hint}
-            </p>
+            <pre
+              style={{
+                whiteSpace: "pre-wrap",
+                fontFamily: "inherit",
+                lineHeight: "1.8",
+              }}
+            >
+              {currentQuestion}
+            </pre>
 
             <button
-            className="next-btn"
-            onClick={generateQuestion}
+              className="next-btn"
+              onClick={generateOfflineQuestion}
             >
-             Next Question →
-              </button>
+              Next Question →
+            </button>
           </div>
         )}
       </div>

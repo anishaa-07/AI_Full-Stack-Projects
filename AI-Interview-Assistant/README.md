@@ -1,16 +1,136 @@
-# React + Vite
+# 🎯 AI Interview Preparation Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered interview preparation platform built with React and Gemini AI. Practice technical interview questions, explore different difficulty levels, and improve your confidence for coding interviews.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 📚 Offline Interview Mode
 
-## React Compiler
+* Java Questions
+* DSA Questions
+* Frontend Questions
+* Backend Questions
+* Easy, Medium, and Hard Levels
+* Random Question Generator
+* Next Question Feature
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🤖 AI Interview Mode
 
-## Expanding the ESLint configuration
+* Gemini AI Integration
+* AI-Generated Interview Questions
+* AI Answers
+* Detailed Explanations
+* Dynamic Question Generation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎨 Modern UI
+
+* Responsive Design
+* Clean User Interface
+* Interactive Controls
+* Professional Interview Dashboard
+
+---
+
+## 🛠️ Tech Stack
+
+* React.js
+* Vite
+* JavaScript
+* CSS3
+* Google Gemini AI API
+
+---
+
+## 📂 Project Structure
+
+```bash
+AI-Interview-Assistant
+│
+├── src
+│   ├── data
+│   │   └── questions.js
+│   │
+│   ├── services
+│   │   └── gemini.js
+│   │
+│   ├── styles
+│   │   └── App.css
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── .env
+├── package.json
+└── README.md
+```
+
+---
+
+## ⚡ Installation
+
+```bash
+git clone <repository-url>
+
+cd AI-Interview-Assistant
+
+npm install
+
+npm run dev
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_GEMINI_API_KEY=your_api_key_here
+```
+
+---
+
+## 🎯 How It Works
+
+### Offline Mode
+
+1. Select Category
+2. Select Difficulty
+3. Click Generate Question
+4. Practice Questions
+5. Use Next Question for more questions
+
+### AI Mode
+
+1. Select Category
+2. Select Difficulty
+3. Click Generate AI Question
+4. Receive AI-generated interview questions
+5. View answers and explanations
+
+---
+
+## 🌟 Future Improvements
+
+* Mock Interview Mode
+* Voice-Based Interviews
+* AI Feedback System
+* Performance Analytics
+* Question Bookmarking
+* Interview Timer
+* User Authentication
+* Progress Tracking Dashboard
+
+---
+
+## 📸 Preview
+
+AI Interview Preparation Assistant helps students and developers practice technical interviews using both predefined question banks and AI-generated content.
+
+---
+
+## 👩‍💻 Author
+
+**Anisha Ranjan**
+
+Built as part of **Project Nova — One Project Every Day. One Step Closer To Excellence.**
