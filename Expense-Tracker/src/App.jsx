@@ -117,9 +117,9 @@ function App() {
 
 const styles = {
   container: {
-    maxWidth: "600px",
-    margin: "40px auto",
-    padding: "20px",
+    maxWidth: "500px",
+    margin: "0px auto",
+    padding: "10px",
     fontFamily: "Arial",
   },
 
