@@ -50,6 +50,8 @@ function App() {
     <div style={styles.container}>
       <h1>💰 Expense Tracker</h1>
 
+      <p>"Track every rupee. Build smarter financial habits."</p>
+
       <div style={styles.balanceCard}>
         <h2>Balance</h2>
         <h1>₹{balance}</h1>
@@ -119,7 +121,7 @@ const styles = {
   container: {
     maxWidth: "500px",
     margin: "0px auto",
-    padding: "10px",
+    padding: "0px",
     fontFamily: "Arial",
   },
 
