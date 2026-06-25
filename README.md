@@ -48,9 +48,9 @@ Project Nova is my personal challenge to build real-world projects consistently 
 # 📈 Progress Tracker
 
 ```text
-Completed Projects: 5 / 15
+Completed Projects: 7 / 15
 
-██████████░░░░░░░░░░ 33%
+██████████████░░░░░░ 47%
 ```
 
 ---
@@ -64,16 +64,16 @@ Completed Projects: 5 / 15
 | 03  | 📄 AI Resume Analyzer Pro             | ✅ Completed   |
 | 04  | 🤖 AI Code Reviewer                   | ✅ Completed   |
 | 05  | 🎤 AI Interview Preparation Assistant | ✅ Completed   |
-| 06  | ✉️ AI Cover Letter Generator          | ⏳ Coming Soon |
-| 07  | 📚 AI Study Notes Generator           | ⏳ Coming Soon |
+| 06  | 💰 Expense Tracker                    | ✅ Completed   |
+| 07  | 🚀 CoverCraft AI                      | ✅ Completed   |
 | 08  | ❓ AI MCQ Generator                    | ⏳ Coming Soon |
-| 09  | 💰 Expense Tracker                    | ⏳ Coming Soon |
-| 10  | 🌦 Weather Dashboard                  | ⏳ Coming Soon |
-| 11  | 🎬 Movie Explorer                     | ⏳ Coming Soon |
-| 12  | ✅ Task Manager                        | ⏳ Coming Soon |
-| 13  | 🌐 Portfolio Website                  | ⏳ Coming Soon |
-| 14  | 👨‍💻 DevConnect                      | ⏳ Coming Soon |
-| 15  | 💼 Job Application Tracker            | ⏳ Coming Soon |
+| 09  | 🌦 Weather Dashboard                  | ⏳ Coming Soon |
+| 10  | 🎬 Movie Explorer                     | ⏳ Coming Soon |
+| 11  | ✅ Task Manager                        | ⏳ Coming Soon |
+| 12  | 🌐 Portfolio Website                  | ⏳ Coming Soon |
+| 13  | 👨‍💻 DevConnect                      | ⏳ Coming Soon |
+| 14  | 💼 Job Application Tracker            | ⏳ Coming Soon |
+| 15  | 🤖 AI Study Notes Generator           | ⏳ Coming Soon |
 
 ---
 
@@ -136,7 +136,6 @@ An AI-powered ATS Resume Analyzer that evaluates resumes using Gemini AI and pro
 * Personalized Suggestions
 * Gemini AI Integration
 * Premium Glassmorphism UI
-* Wine Theme Design
 * Responsive Layout
 
 📂 Folder:
@@ -159,7 +158,7 @@ An AI-powered code review application that analyzes code snippets and provides i
 * Performance Optimization Tips
 * Best Practice Recommendations
 * Gemini AI Integration
-* Premium Wine Theme UI
+* Premium UI Design
 * React + Vite
 
 📂 Folder:
@@ -172,7 +171,7 @@ AI-Code-Reviewer/
 
 ## 5. AI Interview Preparation Assistant
 
-An AI-powered interview preparation platform designed to help users practice technical interview questions across multiple domains and difficulty levels.
+An AI-powered interview preparation platform designed to help users practice technical interview questions.
 
 ### Features
 
@@ -182,16 +181,57 @@ An AI-powered interview preparation platform designed to help users practice tec
 * Backend Interview Questions
 * Easy, Medium & Hard Levels
 * Random Question Generator
-* Next Question Functionality
 * Gemini AI Integration
-* AI Question Generation Support
 * Responsive UI
-* React + Vite
 
 📂 Folder:
 
 ```text
 AI-Interview-Assistant/
+```
+
+---
+
+## 6. Expense Tracker
+
+A modern expense tracking application designed to help users manage their daily expenses efficiently.
+
+### Features
+
+* Add Expenses
+* Delete Expenses
+* Expense Categorization
+* Total Expense Calculation
+* Real-Time Updates
+* Responsive Design
+* React + Vite
+
+📂 Folder:
+
+```text
+Expense-Tracker/
+```
+
+---
+
+## 7. CoverCraft AI
+
+A modern SaaS-inspired cover letter generation platform with premium UI and real-time preview.
+
+### Features
+
+* Premium Hero Section
+* Glassmorphism Design
+* Statistics Dashboard
+* Interactive Cover Letter Generator
+* Real-Time Preview
+* Responsive Layout
+* React + Vite
+
+📂 Folder:
+
+```text
+CoverCraft-AI/
 ```
 
 ---
@@ -232,19 +272,12 @@ AI-Interview-Assistant/
 AI_Full-Stack-Projects
 │
 ├── AI-Chatbot/
-│   └── README.md
-│
 ├── AI-Text-Summarizer/
-│   └── README.md
-│
 ├── AI-Resume-Analyzer/
-│   └── README.md
-│
 ├── AI-Code-Reviewer/
-│   └── README.md
-│
 ├── AI-Interview-Assistant/
-│   └── README.md
+├── Expense-Tracker/
+├── CoverCraft-AI/
 │
 └── README.md
 ```
@@ -257,8 +290,8 @@ AI_Full-Stack-Projects
 const anisha = {
   role: "Full Stack Developer",
   currentlyBuilding: "Project Nova",
-  completedProjects: 5,
-  nextProject: "AI Cover Letter Generator",
+  completedProjects: 7,
+  nextProject: "AI MCQ Generator",
   goal: "Become a Software Engineer",
 };
 ```
@@ -289,12 +322,12 @@ https://github.com/anishaa-07
 
 # ⭐ Project Nova Progress
 
-### 5 / 15 Projects Completed
+### 7 / 15 Projects Completed
 
 Building. Learning. Improving. Every Day.
 
-🚀 Day 5 Completed Successfully
+🚀 Day 7 Completed Successfully
 
-✨ Next Project: AI Cover Letter Generator
+✨ Next Project: AI MCQ Generator
 
 </div>
