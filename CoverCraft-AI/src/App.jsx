@@ -62,6 +62,28 @@ function App() {
           </p>
         </div>
       </section>
+
+      <section className="stats">
+        <div className="stat-card">
+          <h2>10K+</h2>
+          <p>Cover Letters Generated</p>
+        </div>
+
+        <div className="stat-card">
+          <h2>95%</h2>
+          <p>Interview Success Rate</p>
+        </div>
+
+        <div className="stat-card">
+          <h2>50+</h2>
+          <p>Professional Templates</p>
+        </div>
+
+        <div className="stat-card">
+          <h2>24/7</h2>
+          <p>AI Powered Support</p>
+        </div>
+      </section>
     </div>
   );
 }
