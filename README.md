@@ -48,9 +48,9 @@ Project Nova is my personal challenge to build real-world projects consistently 
 # 📈 Progress Tracker
 
 ```text
-Completed Projects: 7 / 15
+Completed Projects: 8 / 15
 
-██████████████░░░░░░ 47%
+████████████████░░░░ 53%
 ```
 
 ---
@@ -66,14 +66,14 @@ Completed Projects: 7 / 15
 | 05  | 🎤 AI Interview Preparation Assistant | ✅ Completed   |
 | 06  | 💰 Expense Tracker                    | ✅ Completed   |
 | 07  | 🚀 CoverCraft AI                      | ✅ Completed   |
-| 08  | ❓ AI MCQ Generator                    | ⏳ Coming Soon |
-| 09  | 🌦 Weather Dashboard                  | ⏳ Coming Soon |
-| 10  | 🎬 Movie Explorer                     | ⏳ Coming Soon |
-| 11  | ✅ Task Manager                        | ⏳ Coming Soon |
-| 12  | 🌐 Portfolio Website                  | ⏳ Coming Soon |
-| 13  | 👨‍💻 DevConnect                      | ⏳ Coming Soon |
-| 14  | 💼 Job Application Tracker            | ⏳ Coming Soon |
-| 15  | 🤖 AI Study Notes Generator           | ⏳ Coming Soon |
+| 08  | 🔥 HabitFlow                          | ✅ Completed   |
+| 09  | ❓ AI MCQ Generator                    | ⏳ Coming Soon |
+| 10  | 🌦 Weather Dashboard                  | ⏳ Coming Soon |
+| 11  | 🎬 Movie Explorer                     | ⏳ Coming Soon |
+| 12  | ✅ Task Manager                        | ⏳ Coming Soon |
+| 13  | 🌐 Portfolio Website                  | ⏳ Coming Soon |
+| 14  | 👨‍💻 DevConnect                      | ⏳ Coming Soon |
+| 15  | 💼 Job Application Tracker            | ⏳ Coming Soon |
 
 ---
 
@@ -236,6 +236,29 @@ CoverCraft-AI/
 
 ---
 
+## 8. HabitFlow
+
+A modern habit tracking application designed to help users build consistency, maintain streaks, and achieve personal growth through daily habit tracking.
+
+### Features
+
+* Add New Habits
+* Track Daily Streaks
+* Progress Analytics Dashboard
+* Local Storage Persistence
+* Interactive Habit Cards
+* Motivation Section
+* Responsive Design
+* React + Vite
+
+📂 Folder:
+
+```text
+HabitFlow/
+```
+
+---
+
 # 🛠️ Tech Stack
 
 ### Frontend
@@ -278,6 +301,7 @@ AI_Full-Stack-Projects
 ├── AI-Interview-Assistant/
 ├── Expense-Tracker/
 ├── CoverCraft-AI/
+├── HabitFlow/
 │
 └── README.md
 ```
@@ -290,7 +314,7 @@ AI_Full-Stack-Projects
 const anisha = {
   role: "Full Stack Developer",
   currentlyBuilding: "Project Nova",
-  completedProjects: 7,
+  completedProjects: 8,
   nextProject: "AI MCQ Generator",
   goal: "Become a Software Engineer",
 };
@@ -322,11 +346,13 @@ https://github.com/anishaa-07
 
 # ⭐ Project Nova Progress
 
-### 7 / 15 Projects Completed
+### 8 / 15 Projects Completed
 
 Building. Learning. Improving. Every Day.
 
-🚀 Day 7 Completed Successfully
+🚀 Day 8 Completed Successfully
+
+🔥 Latest Project: HabitFlow
 
 ✨ Next Project: AI MCQ Generator
 
