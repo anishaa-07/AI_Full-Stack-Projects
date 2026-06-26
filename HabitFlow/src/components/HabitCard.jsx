@@ -1,21 +1,28 @@
 function HabitCard({ habit, toggleHabit, deleteHabit }) {
   return (
-    <div className={`habit-card ${habit.completed ? "completed" : ""}`}>
-      <div>
+    <div
+      className={`habit-card ${
+        habit.completed ? "completed" : ""
+      }`}
+    >
+      <div className="habit-info">
         <h3>{habit.name}</h3>
-        <p>🔥 Streak: {habit.streak}</p>
+
+        <div className="streak-badge">
+          🔥 {habit.streak} Day Streak
+        </div>
       </div>
 
       <div className="actions">
         <button onClick={() => toggleHabit(habit.id)}>
-          {habit.completed ? "Undo" : "Done"}
+          {habit.completed ? "↩ Undo" : "✅ Done"}
         </button>
 
         <button
           className="delete-btn"
           onClick={() => deleteHabit(habit.id)}
         >
-          Delete
+          🗑 Delete
         </button>
       </div>
     </div>

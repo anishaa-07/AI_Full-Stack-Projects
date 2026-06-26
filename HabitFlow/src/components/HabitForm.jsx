@@ -9,6 +9,7 @@ function HabitForm({ addHabit }) {
     if (!habit.trim()) return;
 
     addHabit(habit);
+
     setHabit("");
   };
 
@@ -16,12 +17,14 @@ function HabitForm({ addHabit }) {
     <form className="habit-form" onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Enter a new habit..."
+        placeholder="✨ Add a habit..."
         value={habit}
         onChange={(e) => setHabit(e.target.value)}
       />
 
-      <button type="submit">Add Habit</button>
+      <button type="submit">
+        ➕ Add Habit
+      </button>
     </form>
   );
 }

@@ -52,17 +52,52 @@ function App() {
 
   return (
     <div className="container">
-      <h1>🔥HabitFlow</h1>
+
+      <div className="hero">
+        <h1>🔥 HabitFlow</h1>
+
+        <p className="subtitle">
+          Build consistency. Track progress. Become unstoppable.
+        </p>
+      </div>
+
+      <div className="focus-card">
+        <span className="focus-badge">
+          TODAY'S MOTIVATION
+        </span>
+
+        <h2>
+          Small habits create extraordinary results.
+        </h2>
+
+        <p>
+          Success is the product of daily discipline.
+        </p>
+      </div>
 
       <Dashboard habits={habits} />
 
       <HabitForm addHabit={addHabit} />
 
+      <div className="section-title">
+        <h2>📋 My Habits</h2>
+      </div>
+
       <div className="habits-container">
         {habits.length === 0 ? (
           <div className="empty-state">
+
+            <div className="empty-icon">
+              🌱
+            </div>
+
             <h2>No Habits Yet</h2>
-            <p>Add your first habit and start building consistency.</p>
+
+            <p>
+              Start your first habit and begin your
+              self-improvement journey.
+            </p>
+
           </div>
         ) : (
           habits.map((habit) => (
@@ -75,6 +110,7 @@ function App() {
           ))
         )}
       </div>
+
     </div>
   );
 }
