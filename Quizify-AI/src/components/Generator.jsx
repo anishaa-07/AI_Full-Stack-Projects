@@ -2,20 +2,26 @@ const Generator = () => {
   return (
     <section className="generator">
 
-      <h2>Create a Quiz</h2>
+      <h2>✨ Create Your AI Quiz</h2>
 
       <input
         type="text"
-        placeholder="Enter Topic (Example: Java, React)"
+        placeholder="Enter Topic (Java, React, Python...)"
       />
 
-      <select>
+      <select defaultValue="">
+        <option value="" disabled>
+          Select Difficulty
+        </option>
+
         <option>Easy</option>
         <option>Medium</option>
         <option>Hard</option>
       </select>
 
-      <button>Generate with AI</button>
+      <button>
+        🚀 Generate AI Quiz
+      </button>
 
     </section>
   );
