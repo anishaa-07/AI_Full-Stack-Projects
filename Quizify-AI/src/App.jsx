@@ -1,18 +1,26 @@
 import "./App.css";
+
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Generator from "./components/Generator";
+import QuestionCard from "./components/QuestionCard";
+import Result from "./components/Result";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Navbar />
 
-      <div className="container">
-        <h1>🧠 Quizify AI</h1>
+      <Hero />
 
-        <p>
-          Generate Smart Questions. Learn Smarter.
-        </p>
-      </div>
+      <Generator />
+
+      <QuestionCard />
+
+      <Result />
+
+      <Footer />
     </div>
   );
 }
