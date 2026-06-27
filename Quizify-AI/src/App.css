@@ -196,6 +196,50 @@ body::after{
           HERO
 ========================= */
 
+@media(max-width:900px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+gap:50px;
+
+min-height:auto;
+
+padding:70px 8%;
+
+}
+
+.hero-left p{
+
+margin:auto auto 40px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-left h1{
+
+font-size:48px;
+
+}
+
+.hero-card{
+
+width:100%;
+
+max-width:450px;
+
+}
+
+}
+
 .hero{
     max-width:1200px;
     margin:0 auto;
