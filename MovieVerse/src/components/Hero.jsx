@@ -1,35 +1,70 @@
-import { FaPlay } from "react-icons/fa6";
+import { FaPlay } from "react-icons/fa";
+import { HiArrowRight } from "react-icons/hi";
 
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero-overlay"></div>
 
-      <div className="hero-content">
-        <p className="hero-tag">NOW STREAMING</p>
+      <div className="hero-left">
+
+        <span className="hero-badge">
+          🎬 Featured This Week
+        </span>
 
         <h1>
-          Experience Cinema
+          Discover
           <br />
-          Like Never Before
+          Stories Worth
+          <br />
+          Watching.
         </h1>
 
-        <p className="hero-text">
-          Discover trending blockbusters, timeless classics, and hidden gems
-          from around the world in one premium cinematic experience.
+        <p>
+          Dive into award-winning movies, timeless classics, and
+          unforgettable adventures curated for every cinema lover.
         </p>
 
         <div className="hero-buttons">
+
           <button className="watch-btn">
             <FaPlay />
-            Watch Now
+            Watch Trailer
           </button>
 
           <button className="explore-btn">
-            Explore Movies
+            Explore
+            <HiArrowRight />
           </button>
+
         </div>
+
       </div>
+
+      <div className="hero-right">
+
+        <div className="featured-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=700&q=80"
+            alt="Featured Movie"
+          />
+
+          <div className="featured-info">
+
+            <span>SCI-FI • DRAMA</span>
+
+            <h2>Interstellar</h2>
+
+            <p>
+              ★ 9.2 &nbsp; • &nbsp; 2h 49m
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
   );
 };
