@@ -3,23 +3,25 @@ import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <header className="navbar">
+
       <div className="logo">
         <FaFilm />
         <span>MovieVerse</span>
       </div>
 
-      <ul className="nav-links">
-        <li>Home</li>
-        <li>Trending</li>
-        <li>Top Rated</li>
-        <li>Upcoming</li>
-      </ul>
+      <nav className="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Trending</a>
+        <a href="#">Genres</a>
+        <a href="#">Top Rated</a>
+      </nav>
 
       <button className="search-btn">
         <HiOutlineMagnifyingGlass />
       </button>
-    </nav>
+
+    </header>
   );
 };
 
