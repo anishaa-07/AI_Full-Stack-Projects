@@ -1,27 +1,37 @@
 import { FaStar } from "react-icons/fa";
 
-const MovieCard = () => {
+const MovieCard = ({ movie }) => {
   return (
     <div className="movie-card">
-      <div className="movie-poster">
+
+      <div className="movie-image">
+
         <img
-          src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600"
-          alt="Movie"
+          src={movie.image}
+          alt={movie.title}
         />
 
-        <div className="movie-rating">
+        <span className="rating">
           <FaStar />
-          <span>8.9</span>
-        </div>
+          {movie.rating}
+        </span>
+
       </div>
 
-      <div className="movie-info">
-        <p className="movie-category">SCI-FI • ACTION</p>
+      <div className="movie-content">
 
-        <h3>Interstellar</h3>
+        <span className="genre">
+          {movie.genre}
+        </span>
 
-        <span>2014 • 2h 49m</span>
+        <h3>{movie.title}</h3>
+
+        <p>
+          {movie.year} • {movie.duration}
+        </p>
+
       </div>
+
     </div>
   );
 };
