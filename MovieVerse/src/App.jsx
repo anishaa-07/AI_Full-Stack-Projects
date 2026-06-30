@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 
 import Navbar from "./components/Navbar";
@@ -11,26 +11,33 @@ import { getTrendingMovies } from "./services/api";
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
-    const loadMovies = async () => {
+    async function loadMovies() {
       try {
-        const results = await getTrendingMovies();
-        setMovies(results);
+        const data = await getTrendingMovies();
+        setMovies(data);
       } catch (err) {
         console.error(err);
       }
-    };
+    }
 
     loadMovies();
   }, []);
+
+  const filteredMovies = useMemo(() => {
+    return movies.filter((movie) =>
+      movie.title.toLowerCase().includes(search.toLowerCase())
+    );
+  }, [movies, search]);
 
   return (
     <div className="app">
       <Navbar />
       <Hero />
-      <SearchBar />
-      <MovieGrid movies={movies} />
+      <SearchBar search={search} setSearch={setSearch} />
+      <MovieGrid movies={filteredMovies} />
       <Footer />
     </div>
   );

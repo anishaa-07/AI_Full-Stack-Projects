@@ -26,7 +26,20 @@ const MovieGrid = ({ movies }) => {
         ) : (
 
           <p className="loading-text">
-            Loading movies...
+            <div className="movie-grid">
+  {movies.length ? (
+    movies.map((movie) => (
+      <MovieCard
+        key={movie.id}
+        movie={movie}
+      />
+    ))
+  ) : (
+    <h2 className="loading-text">
+      No movies found.
+    </h2>
+  )}
+</div>
           </p>
 
         )}
