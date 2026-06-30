@@ -6,6 +6,8 @@ import Hero from "./components/Hero";
 import SearchBar from "./components/SearchBar";
 import MovieGrid from "./components/MovieGrid";
 import Footer from "./components/Footer";
+import FeaturedMovie from "./components/FeaturedMovie";
+import Categories from "./components/Categories";
 
 import { getTrendingMovies } from "./services/api";
 
@@ -35,9 +37,19 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-      <Hero />
-      <SearchBar search={search} setSearch={setSearch} />
-      <MovieGrid movies={filteredMovies} />
+     <Hero />
+
+<FeaturedMovie />
+
+<SearchBar
+  search={search}
+  setSearch={setSearch}
+/>
+
+<Categories />
+
+<MovieGrid movies={filteredMovies} />
+
       <Footer />
     </div>
   );
