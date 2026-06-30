@@ -8,30 +8,31 @@ const Hero = () => {
       <div className="hero-left">
 
         <span className="hero-badge">
-          🎬 Featured This Week
+          Featured Collection
         </span>
 
         <h1>
           Discover
           <br />
-          Stories Worth
+          Extraordinary
           <br />
-          Watching.
+          Cinema
         </h1>
 
         <p>
-          Dive into award-winning movies, timeless classics, and
-          unforgettable adventures curated for every cinema lover.
+          Explore award-winning films, timeless classics,
+          and blockbuster adventures with a premium
+          cinematic experience.
         </p>
 
         <div className="hero-buttons">
 
-          <button className="watch-btn">
+          <button className="primary-btn">
             <FaPlay />
             Watch Trailer
           </button>
 
-          <button className="explore-btn">
+          <button className="secondary-btn">
             Explore
             <HiArrowRight />
           </button>
@@ -45,19 +46,17 @@ const Hero = () => {
         <div className="featured-card">
 
           <img
-            src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=700&q=80"
-            alt="Featured Movie"
+            src="https://image.tmdb.org/t/p/w780/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+            alt="Interstellar"
           />
 
-          <div className="featured-info">
+          <div className="featured-content">
 
             <span>SCI-FI • DRAMA</span>
 
             <h2>Interstellar</h2>
 
-            <p>
-              ★ 9.2 &nbsp; • &nbsp; 2h 49m
-            </p>
+            <p>⭐ 9.2 • 2h 49m</p>
 
           </div>
 

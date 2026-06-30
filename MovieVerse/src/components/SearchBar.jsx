@@ -1,5 +1,4 @@
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
-import { FaFire } from "react-icons/fa";
 
 const SearchBar = () => {
   return (
@@ -11,21 +10,21 @@ const SearchBar = () => {
 
         <input
           type="text"
-          placeholder="Search movies, actors, genres..."
+          placeholder="Search movies, actors..."
         />
 
         <button>Search</button>
 
       </div>
 
-      <div className="trending-tags">
+      <div className="popular-tags">
 
-        <span><FaFire /> Trending</span>
+        <span>Popular :</span>
 
+        <button>Interstellar</button>
         <button>Dune</button>
         <button>Batman</button>
         <button>Avatar</button>
-        <button>Interstellar</button>
         <button>Oppenheimer</button>
 
       </div>
