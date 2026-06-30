@@ -6,19 +6,29 @@ const Navbar = () => {
     <header className="navbar">
 
       <div className="logo">
+
         <FaFilm />
+
         <span>MovieVerse</span>
+
       </div>
 
-      <nav className="nav-links">
+      <nav>
+
         <a href="#">Home</a>
+
         <a href="#">Trending</a>
+
+        <a href="#">Popular</a>
+
         <a href="#">Genres</a>
-        <a href="#">Top Rated</a>
+
       </nav>
 
-      <button className="search-btn">
+      <button>
+
         <HiOutlineMagnifyingGlass />
+
       </button>
 
     </header>

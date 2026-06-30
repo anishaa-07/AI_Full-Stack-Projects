@@ -13,26 +13,32 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    const fetchMovies = async () => {
+    async function loadMovies() {
       try {
         const data = await getTrendingMovies();
-        setMovies(data.results);
-      } catch (error) {
-        console.log(error);
+        setMovies(data);
+      } catch (err) {
+        console.error(err);
       }
-    };
+    }
 
-    fetchMovies();
+    loadMovies();
   }, []);
 
   return (
-    <>
+    <div className="app">
+
       <Navbar />
+
       <Hero />
+
       <SearchBar />
+
       <MovieGrid movies={movies} />
+
       <Footer />
-    </>
+
+    </div>
   );
 }
 
