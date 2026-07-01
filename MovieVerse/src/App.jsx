@@ -3,13 +3,11 @@ import "./App.css";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import FeaturedMovie from "./components/FeaturedMovie";
 import SearchBar from "./components/SearchBar";
+import Categories from "./components/Categories";
 import MovieGrid from "./components/MovieGrid";
 import Footer from "./components/Footer";
-import FeaturedMovie from "./components/FeaturedMovie";
-import Categories from "./components/Categories";
-import FeaturedMovie from "./components/FeaturedMovie";
-import Categories from "./components/Categories";
 
 import { getTrendingMovies } from "./services/api";
 
