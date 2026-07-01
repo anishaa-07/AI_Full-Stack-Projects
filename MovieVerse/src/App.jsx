@@ -8,6 +8,8 @@ import MovieGrid from "./components/MovieGrid";
 import Footer from "./components/Footer";
 import FeaturedMovie from "./components/FeaturedMovie";
 import Categories from "./components/Categories";
+import FeaturedMovie from "./components/FeaturedMovie";
+import Categories from "./components/Categories";
 
 import { getTrendingMovies } from "./services/api";
 
@@ -37,20 +39,20 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-     <Hero />
+<Hero />
 
 <FeaturedMovie />
 
 <SearchBar
-  search={search}
-  setSearch={setSearch}
+search={search}
+setSearch={setSearch}
 />
 
 <Categories />
 
 <MovieGrid movies={filteredMovies} />
 
-      <Footer />
+<Footer />
     </div>
   );
 }

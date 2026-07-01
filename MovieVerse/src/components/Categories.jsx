@@ -1,24 +1,29 @@
-const categories = [
-  "Action",
-  "Adventure",
-  "Comedy",
-  "Drama",
-  "Horror",
-  "Sci-Fi",
-  "Animation",
-  "Thriller",
-];
+import genres from "../data/genres";
 
 const Categories = () => {
   return (
     <section className="categories">
-      <h2>Browse by Genre</h2>
 
-      <div className="category-grid">
-        {categories.map((category) => (
-          <button key={category}>{category}</button>
-        ))}
+      <div className="section-title">
+
+        <span>Explore</span>
+
+        <h2>Browse Genres</h2>
+
       </div>
+
+      <div className="category-container">
+
+        {genres.map((genre) => (
+
+          <button key={genre}>
+            {genre}
+          </button>
+
+        ))}
+
+      </div>
+
     </section>
   );
 };

@@ -1,23 +1,37 @@
 const FeaturedMovie = () => {
   return (
-    <section className="featured-section">
+    <section className="featured">
+
       <div className="featured-overlay">
+
         <div className="featured-content">
-          <span>Movie of the Week</span>
+
+          <span>EDITOR'S CHOICE</span>
 
           <h2>Dune: Part Two</h2>
 
           <p>
-            Paul Atreides unites with Chani and the Fremen while seeking
-            revenge against those who destroyed his family.
+            The saga continues as Paul Atreides embraces his destiny
+            among the Fremen while preparing for an epic battle that
+            will decide the future of Arrakis.
           </p>
 
           <div className="featured-buttons">
-            <button className="watch-btn">▶ Watch Trailer</button>
-            <button className="info-btn">More Info</button>
+
+            <button className="primary-btn">
+              Watch Trailer
+            </button>
+
+            <button className="secondary-btn">
+              Details
+            </button>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
   );
 };
