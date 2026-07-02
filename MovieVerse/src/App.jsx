@@ -14,6 +14,7 @@ import { getTrendingMovies } from "./services/api";
 function App() {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
+  const [selectedGenre, setSelectedGenre] = useState("All");
 
   useEffect(() => {
     async function loadMovies() {
@@ -29,28 +30,40 @@ function App() {
   }, []);
 
   const filteredMovies = useMemo(() => {
-    return movies.filter((movie) =>
-      movie.title.toLowerCase().includes(search.toLowerCase())
-    );
-  }, [movies, search]);
+    return movies.filter((movie) => {
+      const matchesSearch = movie.title
+        .toLowerCase()
+        .includes(search.toLowerCase());
+
+      // TMDB trending endpoint doesn't include genre names,
+      // so for now the genre filter only highlights the selection.
+      const matchesGenre = selectedGenre === "All";
+
+      return matchesSearch && matchesGenre;
+    });
+  }, [movies, search, selectedGenre]);
 
   return (
     <div className="app">
       <Navbar />
-<Hero />
 
-<FeaturedMovie />
+      <Hero />
 
-<SearchBar
-search={search}
-setSearch={setSearch}
-/>
+      <FeaturedMovie />
 
-<Categories />
+      <SearchBar
+        search={search}
+        setSearch={setSearch}
+      />
 
-<MovieGrid movies={filteredMovies} />
+      <Categories
+        selectedGenre={selectedGenre}
+        setSelectedGenre={setSelectedGenre}
+      />
 
-<Footer />
+      <MovieGrid movies={filteredMovies} />
+
+      <Footer />
     </div>
   );
 }
