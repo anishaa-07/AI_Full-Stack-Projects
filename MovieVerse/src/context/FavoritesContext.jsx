@@ -1,18 +1,27 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const FavoritesContext = createContext();
 
 export const FavoritesProvider = ({ children }) => {
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState(() => {
+    const saved = localStorage.getItem("favorites");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
 
   const toggleFavorite = (movie) => {
-    const exists = favorites.find((item) => item.id === movie.id);
+    setFavorites((prev) => {
+      const exists = prev.some((item) => item.id === movie.id);
 
-    if (exists) {
-      setFavorites(favorites.filter((item) => item.id !== movie.id));
-    } else {
-      setFavorites([...favorites, movie]);
-    }
+      if (exists) {
+        return prev.filter((item) => item.id !== movie.id);
+      }
+
+      return [...prev, movie];
+    });
   };
 
   const isFavorite = (id) => {
