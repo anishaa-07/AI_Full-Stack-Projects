@@ -15,14 +15,19 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("All");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     async function loadMovies() {
       try {
+        setLoading(true);
         const data = await getTrendingMovies();
         setMovies(data);
       } catch (err) {
-        console.error(err);
+        setError("Failed to load movies.");
+      } finally {
+        setLoading(false);
       }
     }
 
@@ -35,11 +40,7 @@ function App() {
         .toLowerCase()
         .includes(search.toLowerCase());
 
-      // TMDB trending endpoint doesn't include genre names,
-      // so for now the genre filter only highlights the selection.
-      const matchesGenre = selectedGenre === "All";
-
-      return matchesSearch && matchesGenre;
+      return selectedGenre === "All" && matchesSearch;
     });
   }, [movies, search, selectedGenre]);
 
@@ -61,7 +62,13 @@ function App() {
         setSelectedGenre={setSelectedGenre}
       />
 
-      <MovieGrid movies={filteredMovies} />
+      {loading ? (
+        <h2 className="loading-text">Loading Movies...</h2>
+      ) : error ? (
+        <h2 className="loading-text">{error}</h2>
+      ) : (
+        <MovieGrid movies={filteredMovies} />
+      )}
 
       <Footer />
     </div>
