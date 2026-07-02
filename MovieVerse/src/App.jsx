@@ -34,15 +34,17 @@ function App() {
     loadMovies();
   }, []);
 
-  const filteredMovies = useMemo(() => {
-    return movies.filter((movie) => {
-      const matchesSearch = movie.title
-        .toLowerCase()
-        .includes(search.toLowerCase());
+const filteredMovies = useMemo(() => {
+  return movies.filter((movie) => {
+    const matchesSearch = movie.title
+      .toLowerCase()
+      .includes(search.toLowerCase());
 
-      return selectedGenre === "All" && matchesSearch;
-    });
-  }, [movies, search, selectedGenre]);
+    // Until we fetch genre names from TMDB,
+    // keep genre selection from hiding all movies.
+    return matchesSearch;
+  });
+}, [movies, search]);
 
   return (
     <div className="app">
