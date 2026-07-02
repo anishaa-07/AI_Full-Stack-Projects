@@ -9,21 +9,34 @@ import Categories from "./components/Categories";
 import MovieGrid from "./components/MovieGrid";
 import Footer from "./components/Footer";
 
-import { getTrendingMovies } from "./services/api";
+import {
+  getGenres,
+  getTrendingMovies,
+} from "./services/api";
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [genres, setGenres] = useState([]);
+
   const [search, setSearch] = useState("");
-  const [selectedGenre, setSelectedGenre] = useState("All");
+  const [selectedGenre, setSelectedGenre] = useState(0);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    async function loadMovies() {
+    async function loadData() {
       try {
         setLoading(true);
-        const data = await getTrendingMovies();
-        setMovies(data);
+
+        const [movieData, genreData] =
+          await Promise.all([
+            getTrendingMovies(),
+            getGenres(),
+          ]);
+
+        setMovies(movieData);
+        setGenres(genreData);
       } catch (err) {
         setError("Failed to load movies.");
       } finally {
@@ -31,20 +44,22 @@ function App() {
       }
     }
 
-    loadMovies();
+    loadData();
   }, []);
 
-const filteredMovies = useMemo(() => {
-  return movies.filter((movie) => {
-    const matchesSearch = movie.title
-      .toLowerCase()
-      .includes(search.toLowerCase());
+  const filteredMovies = useMemo(() => {
+    return movies.filter((movie) => {
+      const matchesSearch = movie.title
+        .toLowerCase()
+        .includes(search.toLowerCase());
 
-    // Until we fetch genre names from TMDB,
-    // keep genre selection from hiding all movies.
-    return matchesSearch;
-  });
-}, [movies, search]);
+      const matchesGenre =
+        selectedGenre === 0 ||
+        movie.genre_ids.includes(selectedGenre);
+
+      return matchesSearch && matchesGenre;
+    });
+  }, [movies, search, selectedGenre]);
 
   return (
     <div className="app">
@@ -60,14 +75,19 @@ const filteredMovies = useMemo(() => {
       />
 
       <Categories
+        genres={genres}
         selectedGenre={selectedGenre}
         setSelectedGenre={setSelectedGenre}
       />
 
       {loading ? (
-        <h2 className="loading-text">Loading Movies...</h2>
+        <h2 className="loading-text">
+          Loading...
+        </h2>
       ) : error ? (
-        <h2 className="loading-text">{error}</h2>
+        <h2 className="loading-text">
+          {error}
+        </h2>
       ) : (
         <MovieGrid movies={filteredMovies} />
       )}

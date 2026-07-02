@@ -1,18 +1,8 @@
-const genres = [
-  "All",
-  "Action",
-  "Adventure",
-  "Animation",
-  "Comedy",
-  "Crime",
-  "Drama",
-  "Fantasy",
-  "Horror",
-  "Sci-Fi",
-  "Thriller",
-];
-
-const Categories = ({ selectedGenre, setSelectedGenre }) => {
+const Categories = ({
+  genres,
+  selectedGenre,
+  setSelectedGenre,
+}) => {
   return (
     <section className="categories">
       <div className="section-title">
@@ -21,13 +11,24 @@ const Categories = ({ selectedGenre, setSelectedGenre }) => {
       </div>
 
       <div className="category-container">
+        <button
+          className={selectedGenre === 0 ? "active-category" : ""}
+          onClick={() => setSelectedGenre(0)}
+        >
+          All
+        </button>
+
         {genres.map((genre) => (
           <button
-            key={genre}
-            className={selectedGenre === genre ? "active-category" : ""}
-            onClick={() => setSelectedGenre(genre)}
+            key={genre.id}
+            className={
+              selectedGenre === genre.id
+                ? "active-category"
+                : ""
+            }
+            onClick={() => setSelectedGenre(genre.id)}
           >
-            {genre}
+            {genre.name}
           </button>
         ))}
       </div>
